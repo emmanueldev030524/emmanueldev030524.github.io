@@ -851,7 +851,148 @@
             .btn-group {
                 flex-direction: column;
             }
+       /* ==========================================
+   ABOUT ME SECTION
+   ========================================== */
+.about {
+    padding: 100px 6%;
+    background: var(--bg-secondary);
+}
 
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.about-intro {
+    font-size: 20px;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.about-text p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.about-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: var(--bg-card);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.highlight-item i {
+    color: var(--accent);
+    font-size: 18px;
+}
+
+.highlight-item span {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.about-image {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.image-border {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--accent);
+    border-radius: 20px;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+.image-wrapper:hover .image-border {
+    top: 25px;
+    right: 25px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .about-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-text h2 {
+        font-size: 36px;
+    }
+    
+    .about-highlights {
+        flex-direction: column;
+    }
+    
+    .highlight-item {
+        width: 100%;
+    }
+}
             .contact-methods {
                 flex-direction: column;
             }
