@@ -21,6 +21,7 @@
             background: var(--bg-primary);
             color: var(--text-primary);
             overflow-x: hidden;
+            cursor: none;
         }
 
         .cursor {
