@@ -781,9 +781,8 @@
           }
   
           .image-wrapper:hover::before {
-              opacity: 0;  /* Removes overlay on hover */
+              opacity: 0;  
         }
-        /* Contact Section Mobile Responsiveness */
       @media (max-width: 768px) {
           .contact-container {
               padding: 40px 20px;
@@ -914,8 +913,6 @@
         font-size: 15px;
     }
 }
-
-/* Ultra small devices (below 320px) */
 @media (max-width: 320px) {
     .contact-container {
         padding: 25px 12px;
@@ -956,8 +953,6 @@
     transform: translate(-50%, -50%) scale(2);
     background: var(--accent-purple);
 }
-
-/* Hide custom cursor on mobile devices */
 @media (max-width: 768px) {
     .cursor,
     .cursor-ring {
@@ -976,8 +971,6 @@
         cursor: auto !important;
     }
 }
-
-/* Also hide on touch devices */
 @media (hover: none) and (pointer: coarse) {
     .cursor,
     .cursor-ring {
