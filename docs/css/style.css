@@ -928,3 +928,7 @@
         font-size: 14px;
     }
 }
+.cursor.cursor-hover {
+    transform: translate(-50%, -50%) scale(2);
+    background: var(--accent-purple);
+}
