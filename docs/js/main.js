@@ -91,12 +91,16 @@
             dot.addEventListener('click', function() {
                 const sectionId = this.getAttribute('data-section');
                 const section = document.getElementById(sectionId);
+                
+                // Immediately update active state on click
+                navDots.forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                
                 if (section) {
                     section.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
-
         function updateActiveNav() {
             const sections = ['home', 'about', 'skills', 'tools', 'projects', 'contact'];
             let current = 'home';
