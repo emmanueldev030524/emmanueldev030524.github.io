@@ -956,3 +956,35 @@
     transform: translate(-50%, -50%) scale(2);
     background: var(--accent-purple);
 }
+
+/* Hide custom cursor on mobile devices */
+@media (max-width: 768px) {
+    .cursor,
+    .cursor-ring {
+        display: none !important;
+    }
+    
+    body,
+    a,
+    button,
+    .nav-dot,
+    .tool-item,
+    .project-card,
+    .skill-card,
+    .contact-method,
+    .social-link {
+        cursor: auto !important;
+    }
+}
+
+/* Also hide on touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .cursor,
+    .cursor-ring {
+        display: none !important;
+    }
+    
+    body {
+        cursor: auto !important;
+    }
+}
