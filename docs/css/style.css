@@ -45,7 +45,7 @@
             pointer-events: none;
             z-index: 9998;
             transform: translate(-50%, -50%);
-            transition: all 0.15s ease;
+            transition: all 0.08s ease;
             opacity: 0.5;
         }
         
