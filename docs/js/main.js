@@ -11,33 +11,51 @@
             }, 800);
         });
 
-        const cursor = document.querySelector('.cursor');
-        const cursorRing = document.querySelector('.cursor-ring');
+        // Custom Cursor with Smooth Ring
+const cursor = document.querySelector('.cursor');
+const cursorRing = document.querySelector('.cursor-ring');
+
+if (cursor && cursorRing) {
+    let mouseX = 0, mouseY = 0;
+    let ringX = 0, ringY = 0;
+    
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
         
-        if (cursor && cursorRing) {
-            document.addEventListener('mousemove', (e) => {
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-                
-                cursorRing.style.left = e.clientX + 'px';
-                cursorRing.style.top = e.clientY + 'px';
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
+    });
+    
+
+    function animateRing() {
+   
+        ringX += (mouseX - ringX) * 0.15; 
+        ringY += (mouseY - ringY) * 0.15;
+        
+        cursorRing.style.left = ringX + 'px';
+        cursorRing.style.top = ringY + 'px';
+        
+        requestAnimationFrame(animateRing);
+    }
+    animateRing();
+
+    setTimeout(() => {
+        const hoverElements = document.querySelectorAll('a, button, .nav-dot, .tool-item, .project-card, .skill-card, .btn, .social-link, .contact-method');
+        
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+                cursorRing.classList.add('cursor-hover');
             });
-        
-            setTimeout(() => {
-                const hoverElements = document.querySelectorAll('a, button, .nav-dot, .tool-item, .project-card, .skill-card, .btn, .social-link, .contact-method');
-                
-                hoverElements.forEach(el => {
-                    el.addEventListener('mouseenter', () => {
-                        cursor.classList.add('cursor-hover');
-                        cursorRing.classList.add('cursor-hover');
-                    });
-                    el.addEventListener('mouseleave', () => {
-                        cursor.classList.remove('cursor-hover');
-                        cursorRing.classList.remove('cursor-hover');
-                    });
-                });
-            }, 100);
-        }
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+                cursorRing.classList.remove('cursor-hover');
+            });
+        });
+    }, 100);
+}
 
         AOS.init({
             duration: 800,
