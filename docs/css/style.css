@@ -36,7 +36,7 @@
             transition: none;
         }
         
-        .cursor-ring {
+         .cursor-ring {
             width: 40px;
             height: 40px;
             border: 2px solid var(--accent);
@@ -45,7 +45,7 @@
             pointer-events: none;
             z-index: 9998;
             transform: translate(-50%, -50%);
-            transition: all 0.08s ease;
+            transition: width 0.15s ease, height 0.15s ease, opacity 0.15s ease, border-color 0.15s ease;  /* Only animate size/color */
             opacity: 0.5;
         }
         
