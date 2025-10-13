@@ -24,19 +24,42 @@
             cursor: none;
         }
 
-        .cursor {
-            width: 10px;
-            height: 10px;
+       .cursor {
+            width: 8px;
+            height: 8px;
             background: var(--accent);
             border-radius: 50%;
             position: fixed;
             pointer-events: none;
             z-index: 9999;
-            transition: transform 0.2s ease;
             transform: translate(-50%, -50%);
-            mix-blend-mode: difference;
+            transition: none;
         }
-
+        
+        .cursor-ring {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: all 0.15s ease;
+            opacity: 0.5;
+        }
+        
+        .cursor-ring.cursor-hover {
+            width: 60px;
+            height: 60px;
+            opacity: 1;
+            border-color: var(--accent-purple);
+        }
+        
+        .cursor.cursor-hover {
+            background: var(--accent-purple);
+            transform: translate(-50%, -50%) scale(1.5);
+        }
         .loading-screen {
             position: fixed;
             top: 0;
