@@ -11,30 +11,33 @@
             }, 800);
         });
 
-      const cursor = document.querySelector('.cursor');
-
-if (cursor) {
-    // Update cursor position
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-
-    // Add hover effects - wait for DOM to be fully loaded
-    setTimeout(() => {
-        const hoverElements = document.querySelectorAll('a, button, .nav-dot, .tool-item, .project-card, .skill-card');
-        console.log('Hover elements found:', hoverElements.length); // Debug line
+        const cursor = document.querySelector('.cursor');
+        const cursorRing = document.querySelector('.cursor-ring');
         
-        hoverElements.forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.classList.add('cursor-hover');
+        if (cursor && cursorRing) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                cursorRing.style.left = e.clientX + 'px';
+                cursorRing.style.top = e.clientY + 'px';
             });
-            el.addEventListener('mouseleave', () => {
-                cursor.classList.remove('cursor-hover');
-            });
-        });
-    }, 100);
-}
+        
+            setTimeout(() => {
+                const hoverElements = document.querySelectorAll('a, button, .nav-dot, .tool-item, .project-card, .skill-card, .btn, .social-link, .contact-method');
+                
+                hoverElements.forEach(el => {
+                    el.addEventListener('mouseenter', () => {
+                        cursor.classList.add('cursor-hover');
+                        cursorRing.classList.add('cursor-hover');
+                    });
+                    el.addEventListener('mouseleave', () => {
+                        cursor.classList.remove('cursor-hover');
+                        cursorRing.classList.remove('cursor-hover');
+                    });
+                });
+            }, 100);
+        }
 
         AOS.init({
             duration: 800,
