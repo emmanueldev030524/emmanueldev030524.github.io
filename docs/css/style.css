@@ -981,3 +981,146 @@
         cursor: auto !important;
     }
 }
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-description {
+        font-size: 16px;
+    }
+    
+    .hero-badge {
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+    
+    /* Buttons */
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 32px;
+        font-size: 15px;
+    }
+    
+    .btn-group {
+        width: 100%;
+    }
+    
+    /* Section Padding */
+    .hero,
+    .about,
+    .skills,
+    .tools,
+    .projects,
+    .contact {
+        padding: 60px 5%;
+    }
+    
+    .section-header {
+        margin-bottom: 50px;
+    }
+    
+    .section-header h2 {
+        font-size: 32px;
+    }
+    
+    .section-header p {
+        font-size: 16px;
+    }
+    
+    /* About Section */
+    .about-text h2 {
+        font-size: 32px;
+    }
+    
+    .about-intro {
+        font-size: 18px;
+    }
+    
+    .about-text p {
+        font-size: 15px;
+    }
+    
+    .image-wrapper::before {
+        opacity: 0.3;
+    }
+    
+    /* Skills Section */
+    .skill-card {
+        padding: 25px;
+    }
+    
+    .skill-card h3 {
+        font-size: 20px;
+    }
+    
+    .skill-card p {
+        font-size: 14px;
+    }
+    
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    /* Tools Section */
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .tool-item {
+        padding: 25px 15px;
+    }
+    
+    .tool-item i {
+        font-size: 36px;
+    }
+    
+    .tool-item p {
+        font-size: 13px;
+    }
+    
+    /* Projects Section */
+    .project-image {
+        height: 220px;
+    }
+    
+    .project-header {
+        padding: 20px;
+    }
+    
+    .project-body {
+        padding: 0 20px 20px;
+    }
+    
+    .project-card h3 {
+        font-size: 20px;
+    }
+    
+    .project-body p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 385px) {
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+    }
+    
+    .section-header h2 {
+        font-size: 28px;
+    }
+    
+    .about-text h2 {
+        font-size: 28px;
+    }
+}
