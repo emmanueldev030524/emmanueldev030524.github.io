@@ -11,24 +11,30 @@
             }, 800);
         });
 
-        const cursor = document.querySelector('.cursor');
-        
-        if (cursor) {
-            document.addEventListener('mousemove', (e) => {
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-            });
+      const cursor = document.querySelector('.cursor');
 
-            const hoverElements = document.querySelectorAll('a, button, .nav-dot, .tool-item, .project-card, .skill-card');
-            hoverElements.forEach(el => {
-                el.addEventListener('mouseenter', () => {
-                    cursor.style.transform = 'translate(-50%, -50%) scale(2)';
-                });
-                el.addEventListener('mouseleave', () => {
-                    cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-                });
+if (cursor) {
+    // Update cursor position
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    // Add hover effects - wait for DOM to be fully loaded
+    setTimeout(() => {
+        const hoverElements = document.querySelectorAll('a, button, .nav-dot, .tool-item, .project-card, .skill-card');
+        console.log('Hover elements found:', hoverElements.length); // Debug line
+        
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
             });
-        }
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+            });
+        });
+    }, 100);
+}
 
         AOS.init({
             duration: 800,
