@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 :root {
   --bg-primary: #0a0e27;
   --bg-secondary: #151932;
@@ -365,6 +369,7 @@ body {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
+  min-height: 300px;
 }
 
 .image-wrapper img {
