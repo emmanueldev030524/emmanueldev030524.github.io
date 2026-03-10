@@ -77,45 +77,33 @@ AOS.init({
     offset: 100
 });
 
-// ── Particles.js ────────────────────────────────────────────────
-particlesJS('particles-js', {
-    particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: '#00d9ff' },
-        shape: { type: 'circle' },
-        opacity: { value: 0.3, random: true },
-        size: { value: 3, random: true },
-        line_linked: {
-            enable: true,
-            distance: 150,
-            color: '#00d9ff',
-            opacity: 0.2,
-            width: 1
-        },
-        move: {
-            enable: true,
-            speed: 2,
-            direction: 'none',
-            random: false,
-            straight: false,
-            out_mode: 'out',
-            bounce: false
-        }
-    },
-    interactivity: {
-        detect_on: 'canvas',
-        events: {
-            onhover: { enable: true, mode: 'grab' },
-            onclick: { enable: true, mode: 'push' },
-            resize: true
-        },
-        modes: {
-            grab: { distance: 140, line_linked: { opacity: 0.5 } },
-            push: { particles_nb: 4 }
-        }
-    },
-    retina_detect: true
-});
+// ── Background Flowing Paths ────────────────────────────────────
+function generatePaths(svgEl, position) {
+    for (let i = 0; i < 36; i++) {
+        const d = `M-${380 - i * 5 * position} -${189 + i * 6}C-${
+            380 - i * 5 * position} -${189 + i * 6} -${312 - i * 5 * position} ${
+            216 - i * 6} ${152 - i * 5 * position} ${343 - i * 6}C${
+            616 - i * 5 * position} ${470 - i * 6} ${684 - i * 5 * position} ${
+            875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`;
+
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', d);
+        path.setAttribute('stroke', 'currentColor');
+        path.setAttribute('stroke-width', String(0.5 + i * 0.03));
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke-opacity', String(0.1 + i * 0.03));
+        path.setAttribute('pathLength', '1');
+        path.classList.add('bg-path');
+        path.style.animationDuration = (20 + Math.random() * 10) + 's';
+        path.style.animationDelay = -(Math.random() * 20) + 's';
+        svgEl.appendChild(path);
+    }
+}
+
+const bgLeft = document.querySelector('.bg-paths-left');
+const bgRight = document.querySelector('.bg-paths-right');
+if (bgLeft) generatePaths(bgLeft, 1);
+if (bgRight) generatePaths(bgRight, -1);
 
 // ── Side Nav Dots ───────────────────────────────────────────────
 const navDots = document.querySelectorAll('.nav-dot');
@@ -188,9 +176,9 @@ const typewriterEl = document.getElementById('typewriter');
 
 if (typewriterEl) {
     const phrases = [
+        'Full-Stack Developer',
         'Automation Specialist',
         'CRM Integration Expert',
-        'Frontend Developer',
         'Workflow Automation Pro'
     ];
     let phraseIndex = 0;
