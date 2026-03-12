@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <title>
+      Emmanuel Gallardo | WordPress Developer & Automation Specialist
+    </title>
+    <meta
+      name="description"
+      content="WordPress developer and automation specialist helping businesses streamline processes through CRM integration and workflow automation using n8n, Make.com, and Zapier."
+    />
+    <meta
+      property="og:title"
+      content="Emmanuel Gallardo | WordPress Developer & Automation Specialist"
+    />
+    <meta
+      property="og:description"
+      content="I help businesses streamline their processes through WordPress development, CRM integration, and workflow automation using n8n, Make.com, and Zapier."
+    />
+    <meta property="og:image" content="https://i.imgur.com/F2xWo0J.jpeg" />
+    <meta property="og:url" content="https://emmanueldev030524.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Emmanuel Gallardo | WordPress Developer & Automation Specialist"
+    />
+    <meta
+      name="twitter:description"
+      content="WordPress developer and automation specialist. Available for freelance work."
+    />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loader"></div>
+      <div class="loading-text" id="loadingText">Loading Portfolio...</div>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav">
+      <div class="mobile-nav-brand">
+        Emmanuel<span class="gradient-text">.</span>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu">
+        <a href="#home" class="mobile-menu-link">Home</a>
+        <a href="#about" class="mobile-menu-link">About</a>
+        <a href="#skills" class="mobile-menu-link">Skills</a>
+        <a href="#tools" class="mobile-menu-link">Tools</a>
+        <a href="#projects" class="mobile-menu-link">Projects</a>
+        <a href="#testimonials" class="mobile-menu-link">Testimonials</a>
+        <a href="#contact" class="mobile-menu-link">Contact</a>
+      </div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor-ring"></div>
+
+    <div class="side-nav">
+      <div class="nav-dot active" data-tooltip="Home" data-section="home"></div>
+      <div class="nav-dot" data-tooltip="About" data-section="about"></div>
+      <div class="nav-dot" data-tooltip="Skills" data-section="skills"></div>
+      <div class="nav-dot" data-tooltip="Tools" data-section="tools"></div>
+      <div
+        class="nav-dot"
+        data-tooltip="Projects"
+        data-section="projects"
+      ></div>
+      <div
+        class="nav-dot"
+        data-tooltip="Testimonials"
+        data-section="testimonials"
+      ></div>
+      <div class="nav-dot" data-tooltip="Contact" data-section="contact"></div>
+    </div>
+
+    <section class="hero" id="home">
+      <div class="hero-bg-paths">
+        <svg class="bg-paths-svg bg-paths-left" viewBox="-600 -400 1500 1300" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"></svg>
+        <svg class="bg-paths-svg bg-paths-right" viewBox="-600 -400 1500 1300" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"></svg>
+      </div>
+      <div class="hero-split">
+        <div class="hero-text" data-aos="fade-up">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            Available for Work
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Emmanuel</span> —<br />
+            <span class="gradient-text" id="typewriter"
+              >Automation Specialist</span
+            >
+          </h1>
+          <p class="hero-description">
+            I build complete digital systems — from frontend to automation.
+            Websites, CRM pipelines, and workflow automation that work together
+            as one.
+          </p>
+          <div class="btn-group">
+            <a href="#projects" class="btn btn-primary">
+              <span><i class="fas fa-briefcase"></i> View My Work</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span><i class="fas fa-envelope"></i> Get in Touch</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-viz" data-aos="fade-left" data-aos-delay="300">
+          <div class="workflow-canvas" aria-label="Animated workflow showing tools I use: React, Next.js, WordPress, n8n, Make.com, GoHighLevel, and Supabase connected in a data flow">
+            <svg class="workflow-lines" viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f0b429" stop-opacity="0.6"/>
+                  <stop offset="100%" stop-color="#b36bff" stop-opacity="0.6"/>
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="2" result="blur"/>
+                  <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              <!-- Connection paths between nodes (center of each 56px node) -->
+              <!-- React(58,53) → Next.js(208,53) -->
+              <path class="conn-line" d="M 86 53 C 130 53, 164 53, 180 53" stroke="url(#lineGrad)" stroke-width="2" stroke-linecap="round"/>
+              <!-- Next.js(208,53) → WordPress(338,53) -->
+              <path class="conn-line" d="M 236 53 C 270 53, 304 53, 310 53" stroke="url(#lineGrad)" stroke-width="2" stroke-linecap="round"/>
+              <!-- WordPress(338,53) → n8n(308,173) -->
+              <path class="conn-line" d="M 338 81 C 338 110, 320 140, 308 145" stroke="url(#lineGrad)" stroke-width="2" stroke-linecap="round"/>
+              <!-- n8n(308,173) → Make.com(128,173) -->
+              <path class="conn-line" d="M 280 173 C 230 173, 180 173, 156 173" stroke="url(#lineGrad)" stroke-width="2" stroke-linecap="round"/>
+              <!-- Make.com(128,173) → GoHighLevel(168,293) -->
+              <path class="conn-line" d="M 128 201 C 128 235, 148 265, 168 265" stroke="url(#lineGrad)" stroke-width="2" stroke-linecap="round"/>
+              <!-- GoHighLevel(168,293) → Supabase(392,173) -->
+              <path class="conn-line" d="M 196 280 C 260 260, 350 220, 392 201" stroke="url(#lineGrad)" stroke-width="2" stroke-linecap="round"/>
+              <!-- Data pulse dots -->
+              <circle class="pulse-dot" r="3" filter="url(#glow)">
+                <animateMotion dur="2s" repeatCount="indefinite" begin="0s">
+                  <mpath href="#pulse-path-1"/>
+                </animateMotion>
+              </circle>
+              <circle class="pulse-dot" r="3" filter="url(#glow)">
+                <animateMotion dur="2s" repeatCount="indefinite" begin="0.5s">
+                  <mpath href="#pulse-path-2"/>
+                </animateMotion>
+              </circle>
+              <circle class="pulse-dot" r="3" filter="url(#glow)">
+                <animateMotion dur="2s" repeatCount="indefinite" begin="1s">
+                  <mpath href="#pulse-path-3"/>
+                </animateMotion>
+              </circle>
+              <circle class="pulse-dot" r="3" filter="url(#glow)">
+                <animateMotion dur="2s" repeatCount="indefinite" begin="1.5s">
+                  <mpath href="#pulse-path-4"/>
+                </animateMotion>
+              </circle>
+              <circle class="pulse-dot" r="3" filter="url(#glow)">
+                <animateMotion dur="2s" repeatCount="indefinite" begin="2s">
+                  <mpath href="#pulse-path-5"/>
+                </animateMotion>
+              </circle>
+              <circle class="pulse-dot" r="3" filter="url(#glow)">
+                <animateMotion dur="2s" repeatCount="indefinite" begin="2.5s">
+                  <mpath href="#pulse-path-6"/>
+                </animateMotion>
+              </circle>
+              <!-- Hidden paths for animateMotion (match connection paths) -->
+              <path id="pulse-path-1" d="M 86 53 C 130 53, 164 53, 180 53" fill="none"/>
+              <path id="pulse-path-2" d="M 236 53 C 270 53, 304 53, 310 53" fill="none"/>
+              <path id="pulse-path-3" d="M 338 81 C 338 110, 320 140, 308 145" fill="none"/>
+              <path id="pulse-path-4" d="M 280 173 C 230 173, 180 173, 156 173" fill="none"/>
+              <path id="pulse-path-5" d="M 128 201 C 128 235, 148 265, 168 265" fill="none"/>
+              <path id="pulse-path-6" d="M 196 280 C 260 260, 350 220, 392 201" fill="none"/>
+            </svg>
+            <!-- Workflow nodes -->
+            <div class="wf-node wf-node-1" data-label="React">
+              <i class="fab fa-react"></i>
+            </div>
+            <div class="wf-node wf-node-2" data-label="Next.js">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.86-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.572 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z"/></svg>
+            </div>
+            <div class="wf-node wf-node-3" data-label="WordPress">
+              <i class="fab fa-wordpress"></i>
+            </div>
+            <div class="wf-node wf-node-4" data-label="n8n">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <div class="wf-node wf-node-5" data-label="Make.com">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <div class="wf-node wf-node-6" data-label="GoHighLevel">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="wf-node wf-node-7" data-label="Supabase">
+              <i class="fas fa-server"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-orbs">
+        <div class="orb orb-cyan"></div>
+        <div class="orb orb-purple"></div>
+      </div>
+      <div class="about-container" data-aos="fade-up">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>About <span class="gradient-text">Me</span></h2>
+            <p class="about-intro">
+              Hi! I'm Emmanuel, a WordPress developer and automation specialist
+              passionate about creating efficient digital solutions.
+            </p>
+            <p>
+              With expertise in WordPress development, CRM integration, and
+              workflow automation, I help businesses streamline their processes
+              and build powerful online presences. I specialize in creating
+              custom WordPress solutions and automating workflows using tools
+              like Make.com, n8n, and Zapier.
+            </p>
+            <p>
+              When I'm not coding or setting up automations, I'm exploring new
+              technologies and finding better ways to solve problems. I believe
+              in clean code, efficient workflows, and creating solutions that
+              make a real impact.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Based in Philippines</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Available for Freelance</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-laptop-house"></i>
+                <span>Remote-First</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image" data-aos="fade-left" data-aos-delay="200">
+            <div class="image-wrapper">
+              <img
+                src="https://i.imgur.com/F2xWo0J.jpeg"
+                alt="Emmanuel - WordPress Developer"
+                width="400"
+                height="500"
+                loading="lazy"
+              />
+              <div class="image-border"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" id="stats">
+      <div class="stats-container">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="15">0</span
+            ><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="6">0</span
+            ><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="10">0</span
+            ><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">Tools Mastered</div>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="100">0</span
+            ><span class="stat-suffix">%</span>
+          </div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="section-header" data-aos="fade-up">
+        <h2>How I <span class="gradient-text">Work</span></h2>
+        <p>Simple, transparent process — from first message to launch</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-number">01</div>
+          <div class="process-icon"><i class="fas fa-comments"></i></div>
+          <h3>Discovery Call</h3>
+          <p>
+            We talk through your goals, pain points, and what success looks
+            like. No jargon — just clarity.
+          </p>
+        </div>
+        <div class="process-arrow" data-aos="fade-up" data-aos-delay="150">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-number">02</div>
+          <div class="process-icon"><i class="fas fa-cog"></i></div>
+          <h3>Build & Automate</h3>
+          <p>
+            I design and build your solution — WordPress site, automation
+            workflow, or CRM setup — with you in the loop the whole time.
+          </p>
+        </div>
+        <div class="process-arrow" data-aos="fade-up" data-aos-delay="250">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-number">03</div>
+          <div class="process-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Launch & Support</h3>
+          <p>
+            We go live. I make sure everything runs smoothly and you know
+            exactly how it all works before I hand it over.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="section-header" data-aos="fade-up">
+        <h2>What I <span class="gradient-text">Do</span></h2>
+        <p>Specializing in frontend development and automation solutions</p>
+      </div>
+      <div class="skills-container">
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-icon">
+            <i class="fab fa-wordpress"></i>
+          </div>
+          <h3>WordPress Development</h3>
+          <p>
+            Building responsive WordPress websites with custom themes, page
+            builders, and user-friendly interfaces that look great and work
+            smoothly.
+          </p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Workflow Automation</h3>
+          <p>
+            Creating smart automation workflows using n8n, Make.com, and Zapier
+            to save time and eliminate repetitive tasks.
+          </p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-icon">
+            <i class="fas fa-users-cog"></i>
+          </div>
+          <h3>CRM Integration</h3>
+          <p>
+            Connecting and integrating CRM systems with your website and other
+            tools to streamline customer management and data flow.
+          </p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="skill-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Frontend Development</h3>
+          <p>
+            Creating clean, modern website designs with HTML, CSS, and
+            JavaScript that work perfectly on all devices.
+          </p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="skill-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3>API Integration</h3>
+          <p>
+            Connecting different platforms and services together to make them
+            work as one unified system.
+          </p>
+        </div>
+        <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="skill-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Website Maintenance</h3>
+          <p>
+            Keeping websites updated, secure, and running smoothly with regular
+            maintenance and support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools" id="tools">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Tools I <span class="gradient-text">Use</span></h2>
+        <p>Technologies and platforms I work with daily</p>
+      </div>
+      <div class="tools-container">
+        <div class="tools-grid">
+          <!-- Languages & Runtime -->
+          <div class="tool-item">
+            <i class="fab fa-html5"></i>
+            <p>HTML/CSS</p>
+          </div>
+          <div class="tool-item">
+            <i class="fab fa-js"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-code"></i>
+            <p>TypeScript</p>
+          </div>
+          <div class="tool-item">
+            <i class="fab fa-node-js"></i>
+            <p>Node.js</p>
+          </div>
+          <!-- Frameworks & Build Tools -->
+          <div class="tool-item">
+            <i class="fas fa-cube"></i>
+            <p>Next.js</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-wind"></i>
+            <p>Tailwind CSS</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-fire"></i>
+            <p>Vite</p>
+          </div>
+          <!-- CMS & Page Builders -->
+          <div class="tool-item">
+            <i class="fab fa-wordpress"></i>
+            <p>WordPress</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-puzzle-piece"></i>
+            <p>Elementor</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-layer-group"></i>
+            <p>Divi</p>
+          </div>
+          <!-- E-commerce -->
+          <div class="tool-item">
+            <i class="fas fa-shopping-cart"></i>
+            <p>WooCommerce</p>
+          </div>
+          <div class="tool-item">
+            <i class="fab fa-shopify"></i>
+            <p>Shopify</p>
+          </div>
+          <!-- Automation -->
+          <div class="tool-item">
+            <i class="fas fa-network-wired"></i>
+            <p>n8n</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-bolt"></i>
+            <p>Make.com</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-link"></i>
+            <p>Zapier</p>
+          </div>
+          <!-- CRM & Marketing -->
+          <div class="tool-item">
+            <i class="fas fa-rocket"></i>
+            <p>GoHighLevel</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-bullhorn"></i>
+            <p>Keap/IFS</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-chart-line"></i>
+            <p>Braze</p>
+          </div>
+          <!-- Dev Tools -->
+          <div class="tool-item">
+            <i class="fab fa-git-alt"></i>
+            <p>Git</p>
+          </div>
+          <div class="tool-item">
+            <i class="fab fa-github"></i>
+            <p>GitHub</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-laptop-code"></i>
+            <p>VS Code</p>
+          </div>
+          <div class="tool-item">
+            <i class="fab fa-docker"></i>
+            <p>Docker</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-paper-plane"></i>
+            <p>Postman</p>
+          </div>
+          <!-- Database & Backend -->
+          <div class="tool-item">
+            <i class="fas fa-server"></i>
+            <p>Supabase</p>
+          </div>
+          <!-- Design & Data -->
+          <div class="tool-item">
+            <i class="fab fa-figma"></i>
+            <p>Figma</p>
+          </div>
+          <div class="tool-item">
+            <i class="fab fa-google"></i>
+            <p>Google Workspace</p>
+          </div>
+          <div class="tool-item">
+            <i class="fas fa-database"></i>
+            <p>Airtable</p>
+          </div>
+          <!-- AI -->
+          <div class="tool-item">
+            <i class="fas fa-brain"></i>
+            <p>Claude AI</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Featured <span class="gradient-text">Work</span></h2>
+        <p>Some of the projects I've worked on</p>
+      </div>
+      <div class="projects-container">
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image">
+              <div class="project-mockup">
+                <img
+                  src="images/project-ecommerce.png"
+                  alt="E-Commerce Store"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                />
+              </div>
+              <div class="project-overlay">
+                <span class="project-overlay-label"
+                  ><i class="fas fa-eye"></i> View Details</span
+                >
+              </div>
+            </div>
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+              <h3>E-Commerce Store</h3>
+              <p class="project-type">WordPress + WooCommerce</p>
+            </div>
+            <div class="project-body">
+              <p>
+                Built a complete online store with custom product layouts and
+                payment integration — automating order notifications through
+                Zapier and cutting manual processing by 90%.
+              </p>
+              <div class="project-tags">
+                <span class="tag">WordPress</span>
+                <span class="tag">WooCommerce</span>
+                <span class="tag">Zapier</span>
+                <span class="tag">Custom Theme</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-image">
+              <div class="project-mockup">
+                <img
+                  src="images/project-automation.png"
+                  alt="CRM Automation System"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                />
+              </div>
+              <div class="project-overlay">
+                <span class="project-overlay-label"
+                  ><i class="fas fa-eye"></i> View Details</span
+                >
+              </div>
+            </div>
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-sync-alt"></i>
+              </div>
+              <h3>CRM Automation System</h3>
+              <p class="project-type">n8n + Make.com</p>
+            </div>
+            <div class="project-body">
+              <p>
+                Built automated workflows syncing customer data between
+                WordPress, CRM, and email platforms — saving the client 15+
+                hours of manual work per week.
+              </p>
+              <div class="project-tags">
+                <span class="tag">n8n</span>
+                <span class="tag">Make.com</span>
+                <span class="tag">API</span>
+                <span class="tag">CRM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-image">
+              <div class="project-mockup">
+                <img
+                  src="images/project-website.png"
+                  alt="Business Website"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                />
+              </div>
+              <div class="project-overlay">
+                <span class="project-overlay-label"
+                  ><i class="fas fa-eye"></i> View Details</span
+                >
+              </div>
+            </div>
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3>Business Website</h3>
+              <p class="project-type">WordPress + Custom Design</p>
+            </div>
+            <div class="project-body">
+              <p>
+                Designed and built a modern business website with
+                auto-lead-capture forms piped directly into their CRM — cutting
+                lead response time from hours to under 2 minutes.
+              </p>
+              <div class="project-tags">
+                <span class="tag">WordPress</span>
+                <span class="tag">Gutenberg Code Blocks</span>
+                <span class="tag">Forms</span>
+                <span class="tag">Integration</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-image">
+              <div class="project-mockup">
+                <img
+                  src="images/project-email.png"
+                  alt="Email Automation"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                />
+              </div>
+              <div class="project-overlay">
+                <span class="project-overlay-label"
+                  ><i class="fas fa-eye"></i> View Details</span
+                >
+              </div>
+            </div>
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-envelope-open-text"></i>
+              </div>
+              <h3>Email Automation</h3>
+              <p class="project-type">Zapier + Make.com</p>
+            </div>
+            <div class="project-body">
+              <p>
+                Built behavior-triggered email sequences with personalized
+                content — achieving a 42% open rate and directly attributing
+                $12k+ in monthly revenue to the automation.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Make.com</span>
+                <span class="tag">GoHighLevel</span>
+                <span class="tag">ActiveCampaign</span>
+                <span class="tag">Automation</span>
+                <span class="tag">Workflows</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="section-orbs">
+        <div class="orb orb-cyan"></div>
+        <div class="orb orb-purple"></div>
+      </div>
+      <div class="section-header" data-aos="fade-up">
+        <h2>Client <span class="gradient-text">Feedback</span></h2>
+        <p>What clients say about working with me</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Emmanuel completely transformed our order management. What used to
+            take our team 3 hours a day now runs automatically. Highly recommend
+            his automation work."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JR</div>
+            <div>
+              <div class="testimonial-name">James R.</div>
+              <div class="testimonial-role">E-Commerce Store Owner</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "He built our WordPress site and connected it to our CRM seamlessly.
+            Every lead now goes straight into our pipeline. Fast, clean, and
+            exactly what we needed."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SM</div>
+            <div>
+              <div class="testimonial-name">Sarah M.</div>
+              <div class="testimonial-role">Marketing Director</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Our email sequences used to be manually sent. Emmanuel set up a
+            full automation with Make.com that's been running flawlessly for
+            months. Great communicator too."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DL</div>
+            <div>
+              <div class="testimonial-name">David L.</div>
+              <div class="testimonial-role">SaaS Founder</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-orbs">
+        <div class="orb orb-cyan"></div>
+        <div class="orb orb-purple"></div>
+      </div>
+      <div class="contact-container" data-aos="fade-up">
+        <h2><span class="gradient-text">Let's Work Together</span></h2>
+        <p>
+          Need help with WordPress, automation, or CRM integration? I'd love to
+          hear about your project and see how I can help!
+        </p>
+        <div class="contact-methods">
+          <div
+            class="contact-method"
+            onclick="
+              window.location.href = 'mailto:emmanueljumelgallardo@gmail.com'
+            "
+          >
+            <i class="fas fa-envelope"></i>
+            <span>emmanueljumelgallardo@gmail.com</span>
+            <button
+              class="copy-btn"
+              onclick="copyEmail(event)"
+              title="Copy email"
+              aria-label="Copy email address"
+            >
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+          <div
+            class="contact-method"
+            onclick="window.open('https://wa.me/639759486240', '_blank')"
+          >
+            <i class="fab fa-whatsapp"></i>
+            <span>+63 9759486240</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://github.com/emmanueldev030524"
+            class="social-link"
+            title="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="#" class="social-link" title="OnlineJobs.ph"
+            ><i class="fas fa-briefcase"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/emman.gallardo.7739"
+            class="social-link"
+            title="Facebook"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      style="
+        text-align: center;
+        padding: 20px;
+        color: var(--text-secondary);
+        font-size: 13px;
+      "
+    >
+      &copy; 2025 Built & Designed by Emmanuel Gallardo.
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
